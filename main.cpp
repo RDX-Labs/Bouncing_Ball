@@ -19,7 +19,7 @@ float transY =0.0f;
 void initializeRendering(){
     if (!glfwInit())exit(EXIT_FAILURE);
 }
-
+//Dhruv was here
 //Called when a key is pressed
 void handleKeypress(GLFWwindow* window, int key, int scancode, int action, int mode) { //The key that was pressed
     if (action == GLFW_PRESS) {
