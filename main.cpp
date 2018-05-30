@@ -7,7 +7,8 @@
 *
 */
 
-//ek faltu ka push check karne ke liye comment//S
+//ek faltu ka push check karne ke liye comment//
+//ek aur comment bakchodi ke naam//
 
 #include <windows.h>
 #include <GL/glu.h>
