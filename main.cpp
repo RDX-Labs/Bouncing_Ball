@@ -9,24 +9,20 @@
 
 #include <windows.h>
 #include <GL/glu.h>
-//include header file for glfw library so that we can use OpenGL
 #include <GLFW/glfw3.h>
-#include <stdlib.h>  //needed for exit function
-#include <iostream>
+
 using namespace std;
 
 float transX =0.0f;
 float transY =0.0f;
 
 //Initializes 3D rendering
-void initializeRendering()
-{
+void initializeRendering(){
     if (!glfwInit())exit(EXIT_FAILURE);
 }
 
 //Called when a key is pressed
-void handleKeypress(GLFWwindow* window, int key, int scancode, int action, int mode) //The key that was pressed
-{
+void handleKeypress(GLFWwindow* window, int key, int scancode, int action, int mode) { //The key that was pressed
     if (action == GLFW_PRESS) {
         switch (key) {
             case GLFW_KEY_UP:
@@ -48,8 +44,7 @@ void handleKeypress(GLFWwindow* window, int key, int scancode, int action, int m
 }
 
 //Called when the window is resized
-void handleResize( GLFWwindow* window, int width,int height)
-{
+void handleResize( GLFWwindow* window, int width,int height) {
     int fbwidth, fbheight;
     glfwGetFramebufferSize( window, &fbwidth, &fbheight );
     //Tell OpenGL how to convert from coordinates to pixel values
@@ -63,8 +58,8 @@ void handleResize( GLFWwindow* window, int width,int height)
                     1.0f,                          //The near z clipping coordinate
                     100.0f );                       //The far z clipping coordinate
 }
-void display(GLFWwindow* window)
-{
+
+void display(GLFWwindow* window) {
     glClearColor( 0.0f, 0.0f, 0.0f, 0.0f ); //clear background screen to black
 
     //Clear information from last draw
@@ -89,8 +84,8 @@ void display(GLFWwindow* window)
     glfwSwapBuffers(window);
 
 }
-int main()
-{
+
+int main() {
     // int     width, height;
     //int     frame = 0;
     bool running = true;
