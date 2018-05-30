@@ -7,6 +7,8 @@
 *
 */
 
+//ek faltu ka push check karne ke liye comment//S
+
 #include <windows.h>
 #include <GL/glu.h>
 #include <GLFW/glfw3.h>
